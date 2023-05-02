@@ -56,7 +56,7 @@ const UtiList = ({ uti, index, utiFilter, getListAfterDelete }: Props) => {
         callback: (resp) => {
           if (resp?.status === 200) {
             getListAfterDelete();
-            alertRequestSuccess('Deleted successfully!');
+            alertRequestSuccess('Deleted successfull!');
           } else {
             alertRequestFailure(resp?.message);
           }
