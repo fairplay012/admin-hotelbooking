@@ -59,7 +59,7 @@ const Administrator = ({ administrator, index, adminFilter, getListAfterDelete }
         callback: (resp) => {
           if (resp?.status === 200) {
             getListAfterDelete();
-            alertRequestSuccess('Deleted successfully!');
+            alertRequestSuccess('Delete successfully!');
           } else {
             alertRequestFailure(resp?.message);
           }
