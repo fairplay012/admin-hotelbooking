@@ -153,6 +153,7 @@ const RoomIndex = () => {
               <TableCell>Hotel</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>Price </TableCell>
+              <TableCell>Quantity </TableCell>
               <TableCell align="center">Actions</TableCell>
             </TableRow>
           </TableHead>

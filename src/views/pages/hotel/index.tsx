@@ -41,7 +41,7 @@ const initialState: HotelFilter = {
 const HoteIndex = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
-  const hotelState = useSelector((state) => state?.hotel);
+  const hotelState = useSelector((state) => state?.hotel); // lay api tu redux
   const menuState = useSelector((state) => state?.menu);
 
   const matchDownSM = useMediaQuery(theme.breakpoints.down('md'));

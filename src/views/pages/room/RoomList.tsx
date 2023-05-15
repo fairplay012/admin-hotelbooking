@@ -115,7 +115,9 @@ const RoomList = ({ room, index, roomFilter, getListAfterDelete }: Props) => {
         <TableCell component="th" scope="row">
           {room.price}
         </TableCell>
-
+        <TableCell component="th" scope="row">
+          {room.quantity}
+        </TableCell>
         <TableCell align="center">
           <ButtonBase
             className="more-button"

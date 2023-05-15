@@ -26,6 +26,7 @@ export type Room = {
   imgURL?: string;
   price?: number;
   hotel?: any;
+  quantity?: number;
   createdAt?: string;
   updatedAt?: string;
   __v?: number;

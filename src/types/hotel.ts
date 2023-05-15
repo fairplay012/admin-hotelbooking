@@ -25,7 +25,7 @@ export type Hotel = {
   description?: string;
   imgURL?: string;
   area?: string;
-  rooms?: string;
+  rooms?: any;
   createdAt?: string;
   updatedAt?: string;
   __v?: number;

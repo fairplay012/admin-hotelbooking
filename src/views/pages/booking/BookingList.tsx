@@ -73,6 +73,8 @@ const BookingList = ({ booking, index, bookingFilter, getListAfterDelete }: Prop
         </TableCell>
         <TableCell sx={{ textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '290px' }}>{booking.customer}</TableCell>
         <TableCell sx={{ textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '200px' }}>{booking.email}</TableCell>
+        {/* <TableCell sx={{ textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '200px' }}>{booking.startDate}</TableCell>
+        <TableCell sx={{ textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '200px' }}>{booking.endDate}</TableCell> */}
         <TableCell sx={{ textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '290px' }}>{booking.trans}</TableCell>
         <TableCell sx={{ textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '290px' }}>{booking.Note}</TableCell>
         <TableCell sx={{ textOverflow: 'ellipsis', overflow: 'hidden', maxWidth: '290px' }}>

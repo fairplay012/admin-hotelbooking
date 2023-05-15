@@ -109,7 +109,7 @@ const AddHotel = ({ open, editing, handleDrawerOpen, hotelFilter, hotel }: Props
       description: hotel?.description,
       area: hotel?.area,
       imgURL: hotel?.imgURL,
-      rooms: hotel?.rooms
+      rooms: hotel?._id ? hotel?.rooms : []
     },
     validationSchema,
     onSubmit: (values) => {
@@ -238,21 +238,42 @@ const AddHotel = ({ open, editing, handleDrawerOpen, hotelFilter, hotel }: Props
                   <Grid item xs={12}>
                     <FormControl fullWidth>
                       <InputLabel>Room</InputLabel>
-                      <Select
-                        id="rooms"
-                        name="rooms"
-                        label="room"
-                        displayEmpty
-                        value={formik.values.rooms}
-                        onChange={formik.handleChange}
-                        inputProps={{ 'aria-label': 'Without label' }}
-                      >
-                        {roomState?.rooms.map((room: any, index: number) => (
-                          <MenuItem key={index} value={room._id}>
-                            {room.name}
-                          </MenuItem>
-                        ))}
-                      </Select>
+                      {hotel?._id ? (
+                        <Select
+                          id="rooms"
+                          multiple
+                          disabled
+                          name="rooms"
+                          label="room"
+                          displayEmpty
+                          value={formik.values.rooms}
+                          onChange={formik.handleChange}
+                          inputProps={{ 'aria-label': 'Without label' }}
+                        >
+                          {roomState?.rooms.map((room: any, index: number) => (
+                            <MenuItem key={index} value={room._id}>
+                              {room.name}
+                            </MenuItem>
+                          ))}
+                        </Select>
+                      ) : (
+                        <Select
+                          id="rooms"
+                          multiple
+                          name="rooms"
+                          label="room"
+                          displayEmpty
+                          value={formik.values.rooms}
+                          onChange={formik.handleChange}
+                          inputProps={{ 'aria-label': 'Without label' }}
+                        >
+                          {roomState?.rooms.map((room: any, index: number) => (
+                            <MenuItem key={index} value={room._id}>
+                              {room.name}
+                            </MenuItem>
+                          ))}
+                        </Select>
+                      )}
                     </FormControl>
                   </Grid>
                   <Grid item xs={12}>
