@@ -20,6 +20,7 @@ export type TranstFilter = {
 export type Transt = {
   _id?: string;
   type?: string;
+  hotel?: any;
   price?: number;
   createdAt?: string;
   updatedAt?: string;
